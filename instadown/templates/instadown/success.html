@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Successful</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'downloader/styles.css' %}">
+    <script>
+        function showSuccessMessage() {
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</head>
+<body onload="showSuccessMessage()">
+    <header>
+        <h1>Instagram Video Downloader</h1>
+    </header>
+
+    <main>
+        <section class="download-section">
+            <h2>Download Successful!</h2>
+            <p>Your video has been downloaded successfully!</p>
+            <p>Video URL: <a href="{{ video_url }}" target="_blank">{{ video_url }}</a></p>
+            <button onclick="window.location.href='/'">Download Another Video</button>
+        </section>
+
+        <div id="success-message" style="display: none; background-color: #d4edda; color: #155724; padding: 15px; border: 1px solid #c3e6cb; border-radius: 5px; margin-top: 20px;">
+            Your video has been downloaded successfully!
+        </div>
+    </main>
+
+    <footer>
+        <p style="margin-block-start: 650px;
+        margin-inline-start: 800px;">&copy; 2025 Instagram Video Downloader. All rights reserved.</p>
+    </footer>
+</body>
+</html>
